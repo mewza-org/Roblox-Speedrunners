@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Official Top Roblox Speedrunners List</title>
+<meta name="description" content="The Official Top Roblox Speedrunners List, founded and owned by zVoidSkixlled, founder of Mewza.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#eef1f6; --surface:#fff; --ink:#14192b; --muted:#5d6580; --line:#d8deea;
+  --accent:#2f5bff; --accent-ink:#fff; --on:#17935a; --off:#8a91a8; --bar:#dfe6ff; --barfill:#2f5bff;
+  --font:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#10131f; --surface:#181d2e; --ink:#e8ecf8; --muted:#9aa3bf; --line:#2a3148;
+    --accent:#7d9bff; --accent-ink:#10131f; --on:#3ed486; --off:#6c7491; --bar:#253056; --barfill:#7d9bff;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#10131f; --surface:#181d2e; --ink:#e8ecf8; --muted:#9aa3bf; --line:#2a3148;
+  --accent:#7d9bff; --accent-ink:#10131f; --on:#3ed486; --off:#6c7491; --bar:#253056; --barfill:#7d9bff;
+}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.45}
+.wrap{max-width:1180px;margin:0 auto;padding:32px 20px 56px}
+header{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:flex-end;margin-bottom:24px}
+h1{margin:0;font-size:clamp(2rem,5vw,3.4rem);line-height:1;font-weight:800;font-stretch:80%;letter-spacing:-.02em}
+.sub{margin:8px 0 0;color:var(--muted);max-width:60ch}
+.summary{display:flex;gap:10px;flex-wrap:wrap}
+.pill{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.9rem}
+.pill b{font-weight:700;font-variant-numeric:tabular-nums}
+.pill.live b{color:var(--on)}
+.tools{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px}
+.tools input,.tools select,.tools button{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px}
+.tools input[type=search]{flex:1 1 220px;min-width:0}
+.tools label{display:flex;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer}
+.tools button{cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.scroll{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;min-width:900px}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+th{font-weight:600;font-size:.85rem;color:var(--muted);position:sticky;top:0;background:var(--surface)}
+th button{all:unset;cursor:pointer;display:inline-flex;gap:4px;align-items:center}
+th button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+th[aria-sort="ascending"] button::after{content:"\25B2";font-size:.65rem}
+th[aria-sort="descending"] button::after{content:"\25BC";font-size:.65rem}
+td.rank{font-weight:800;font-size:1.1rem;font-variant-numeric:tabular-nums;color:var(--accent);width:56px}
+.name b{display:block;font-weight:700}
+.name span{color:var(--muted);font-size:.85rem}
+.stat{display:flex;align-items:center;gap:8px;font-variant-numeric:tabular-nums;font-weight:600;min-width:96px}
+.bar{flex:1;height:6px;border-radius:3px;background:var(--bar);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--barfill)}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--off);margin-right:7px}
+.is-on .dot{background:var(--on);box-shadow:0 0 0 3px color-mix(in srgb,var(--on) 25%,transparent)}
+.is-on{color:var(--on);font-weight:700}
+.muted{color:var(--muted)}
+a{color:var(--accent)}
+.tag{border:1px solid var(--line);border-radius:6px;padding:2px 8px;font-size:.8rem}
+.empty{padding:32px;text-align:center;color:var(--muted)}
+footer{margin-top:16px;color:var(--muted);font-size:.85rem}
+.about{margin-top:32px;display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.about section{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.about h2{margin:0 0 8px;font-size:1.15rem;font-weight:700}
+.about p{margin:0;max-width:62ch;color:var(--muted)}
+.about p strong{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Official Top Roblox Speedrunners List</h1>
+      <p class="sub">The original ranking of Roblox speedrunners, founded and owned by <strong>zVoidSkixlled</strong>, founder of Mewza. Ranked by bounce, no-bounce, consistency and cam scores, with live online status.</p>
+    </div>
+    <div class="summary" id="summary" aria-live="polite"></div>
+  </header>
+
+  <div class="tools">
+    <input type="search" id="q" placeholder="Search username or display name" aria-label="Search runners">
+    <select id="region" aria-label="Filter by region"><option value="">All regions</option></select>
+    <select id="device" aria-label="Filter by device"><option value="">All devices</option><option>PC</option><option>MOB</option></select>
+    <label><input type="checkbox" id="onlyActive"> Active runners</label>
+    <label><input type="checkbox" id="onlyOnline"> Online now</label>
+    <button type="button" id="theme">Toggle theme</button>
+  </div>
+
+  <div class="scroll">
+    <table>
+      <thead><tr id="head"></tr></thead>
+      <tbody id="body"></tbody>
+    </table>
+    <div class="empty" id="empty" hidden>No runners match these filters.</div>
+  </div>
+  <div class="about">
+    <section aria-labelledby="h-about">
+      <h2 id="h-about">About the list</h2>
+      <p>The Official Top Roblox Speedrunners List was first suggested and is owned by <strong>zVoidSkixlled</strong>, founder of Mewza and of this list. Runners are ranked on four criteria: bounce, no-bounce, consistency and cam. The data on this page is maintained by the list's owner.</p>
+    </section>
+    <section aria-labelledby="h-auth">
+      <h2 id="h-auth">Authenticity notice</h2>
+      <p>This is the original and only official version of the list. Copies of this list or its code that claim it as their own are not authentic and are not endorsed by its owner. <strong>TTTiers</strong> is not the original list and is not affiliated with this one. Its rankings are not endorsed here and may not match the official data.</p>
+    </section>
+  </div>
+  <footer><span id="foot"></span><br>&copy; 2026 zVoidSkixlled. Official Top Roblox Speedrunners List. All rights reserved.</footer>
+</div>
+
+<script>
+const COLS=[
+  {k:"rank",t:"#"},{k:"name",t:"Runner"},{k:"bounce",t:"Bounce"},{k:"nobounce",t:"No-bounce"},
+  {k:"consistency",t:"Consistency"},{k:"cam",t:"Cam"},{k:"device",t:"Device"},{k:"region",t:"Region"},
+  {k:"status",t:"Activity"},{k:"presence",t:"Online"},{k:"youtube",t:"YouTube"}
+];
+const state={rows:[],presence:{},sort:"rank",dir:1};
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+function presenceOf(r){
+  const p=state.presence[r.id];
+  if(!p)return{online:false,known:false,last:null};
+  return{online:Number(p.type)>0,known:true,last:p.lastOnline?new Date(p.lastOnline):null};
+}
+function ago(d){
+  if(!d||isNaN(d))return"unknown";
+  const s=Math.max(0,(Date.now()-d.getTime())/1000);
+  const u=[[31536000,"y"],[2592000,"mo"],[86400,"d"],[3600,"h"],[60,"min"]];
+  for(const[n,l]of u){if(s>=n)return Math.floor(s/n)+" "+l+" ago"}
+  return"just now";
+}
+function presenceCell(r){
+  const p=presenceOf(r);
+  if(p.online)return'<span class="is-on"><span class="dot"></span>Online now</span>';
+  if(!p.known)return'<span class="muted"><span class="dot"></span>No data</span>';
+  return'<span><span class="dot"></span>Offline</span> <span class="muted">· seen '+ago(p.last)+'</span>';
+}
+function stat(v){
+  const n=Number(v)||0;
+  return'<div class="stat"><span>'+n+'</span><div class="bar"><i style="width:'+Math.min(100,n)+'%"></i></div></div>';
+}
+function safeYT(u){
+  try{const x=new URL(u);return x.protocol==="https:"&&/(^|\.)youtube\.com$/.test(x.hostname)?x.href:""}catch{return""}
+}
+function sortVal(r,k){
+  if(k==="presence"){const p=presenceOf(r);return p.online?Infinity:(p.last?p.last.getTime():-1)}
+  if(k==="name")return(r.display||r.name).toLowerCase();
+  return r[k]??"";
+}
+function filtered(){
+  const q=$("q").value.trim().toLowerCase(),rg=$("region").value,dv=$("device").value;
+  const act=$("onlyActive").checked,onl=$("onlyOnline").checked;
+  return state.rows.filter(r=>
+    (!q||r.name.toLowerCase().includes(q)||String(r.display).toLowerCase().includes(q))&&
+    (!rg||r.region===rg)&&(!dv||r.device===dv)&&
+    (!act||r.status==="active")&&(!onl||presenceOf(r).online));
+}
+function render(){
+  const rows=filtered().sort((a,b)=>{
+    const x=sortVal(a,state.sort),y=sortVal(b,state.sort);
+    return(x<y?-1:x>y?1:a.rank-b.rank)*state.dir;
+  });
+  $("head").innerHTML=COLS.map(c=>{
+    const s=state.sort===c.k?(state.dir===1?"ascending":"descending"):"none";
+    return'<th scope="col" aria-sort="'+s+'"><button type="button" data-k="'+c.k+'">'+c.t+'</button></th>';
+  }).join("");
+  $("body").innerHTML=rows.map(r=>{
+    const yt=safeYT(r.youtube);
+    return'<tr><td class="rank">'+r.rank+'</td>'+
+      '<td class="name"><b>'+esc(r.display||r.name)+'</b><span>@'+esc(r.name)+'</span></td>'+
+      '<td>'+stat(r.bounce)+'</td><td>'+stat(r.nobounce)+'</td><td>'+stat(r.consistency)+'</td><td>'+stat(r.cam)+'</td>'+
+      '<td><span class="tag">'+esc(r.device)+'</span></td>'+
+      '<td>'+(r.region?esc(r.region):'<span class="muted">n/a</span>')+'</td>'+
+      '<td>'+(r.status==="active"?'Active':'<span class="muted">Inactive</span>')+'</td>'+
+      '<td>'+presenceCell(r)+'</td>'+
+      '<td>'+(yt?'<a href="'+esc(yt)+'" target="_blank" rel="noopener noreferrer">Channel</a>':'<span class="muted">none</span>')+'</td></tr>';
+  }).join("");
+  $("empty").hidden=rows.length>0;
+  const on=state.rows.filter(r=>presenceOf(r).online).length;
+  $("summary").innerHTML='<span class="pill"><b>'+state.rows.length+'</b> runners</span>'+
+    '<span class="pill"><b>'+state.rows.filter(r=>r.status==="active").length+'</b> active</span>'+
+    '<span class="pill live"><b>'+on+'</b> online now</span>';
+}
+async function loadPresence(){
+  try{
+    const res=await fetch("presence.json?t="+Date.now(),{cache:"no-store"});
+    if(!res.ok)throw new Error(res.status);
+    const j=await res.json();
+    state.presence=j.users||{};
+    $("foot").textContent=j.updated?"Presence last updated "+ago(new Date(j.updated))+".":"Presence data loaded.";
+  }catch{
+    $("foot").textContent="No presence.json found yet, so online status shows as No data. See README steps to generate it.";
+  }
+  render();
+}
+async function init(){
+  try{
+    const res=await fetch("data.json");
+    if(!res.ok)throw new Error(res.status);
+    const d=await res.json();
+    const K=d.meta.scoreKeys,YT=d.meta.yt;
+    state.rows=d.runners.map((r,i)=>{
+      const o={id:String(r.uid),name:r.user,display:r.alias,device:r.dev,region:r.reg||"",
+        status:r.act?"active":"inactive",youtube:r.yt?YT+r.yt:"",rank:i+1};
+      K.forEach((k,j)=>{o[k]=r.s[j]});
+      return o;
+    });
+  }catch{
+    $("body").innerHTML="";$("empty").hidden=false;
+    $("empty").textContent="Could not load data.json. Put it next to index.html and serve over http (GitHub Pages or a local server).";
+    return;
+  }
+  const regions=[...new Set(state.rows.map(r=>r.region).filter(Boolean))].sort();
+  $("region").insertAdjacentHTML("beforeend",regions.map(r=>'<option>'+esc(r)+'</option>').join(""));
+  await loadPresence();
+  setInterval(loadPresence,60000);
+}
+$("head").addEventListener("click",e=>{
+  const b=e.target.closest("button[data-k]");if(!b)return;
+  const k=b.dataset.k;
+  if(state.sort===k)state.dir*=-1;
+  else{state.sort=k;state.dir=["rank","name","region","device"].includes(k)?1:-1}
+  render();
+});
+["q","region","device","onlyActive","onlyOnline"].forEach(id=>$(id).addEventListener("input",render));
+$("theme").addEventListener("click",()=>{
+  const r=document.documentElement;
+  const dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;
+  r.dataset.theme=dark?"light":"dark";
+});
+init();
+</script>
+</body>
+</html>
