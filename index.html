@@ -1,241 +1,170 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Official Top Roblox Speedrunners List</title>
-<meta name="description" content="The Official Top Roblox Speedrunners List, founded and owned by zVoidSkixlled, founder of Mewza.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&display=swap" rel="stylesheet">
+<title>Roblox Speedrun Leaderboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  color-scheme:light;
-  --bg:#eef1f6; --surface:#fff; --ink:#14192b; --muted:#5d6580; --line:#d8deea;
-  --accent:#2f5bff; --accent-ink:#fff; --on:#17935a; --off:#8a91a8; --bar:#dfe6ff; --barfill:#2f5bff;
-  --font:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    color-scheme:dark;
-    --bg:#10131f; --surface:#181d2e; --ink:#e8ecf8; --muted:#9aa3bf; --line:#2a3148;
-    --accent:#7d9bff; --accent-ink:#10131f; --on:#3ed486; --off:#6c7491; --bar:#253056; --barfill:#7d9bff;
-  }
-}
-:root[data-theme="dark"]{
-  color-scheme:dark;
-  --bg:#10131f; --surface:#181d2e; --ink:#e8ecf8; --muted:#9aa3bf; --line:#2a3148;
-  --accent:#7d9bff; --accent-ink:#10131f; --on:#3ed486; --off:#6c7491; --bar:#253056; --barfill:#7d9bff;
-}
-:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-*,*::before,*::after{box-sizing:inherit}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.45}
-.wrap{max-width:1180px;margin:0 auto;padding:32px 20px 56px}
-header{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:flex-end;margin-bottom:24px}
-h1{margin:0;font-size:clamp(2rem,5vw,3.4rem);line-height:1;font-weight:800;font-stretch:80%;letter-spacing:-.02em}
-.sub{margin:8px 0 0;color:var(--muted);max-width:60ch}
-.summary{display:flex;gap:10px;flex-wrap:wrap}
-.pill{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.9rem}
-.pill b{font-weight:700;font-variant-numeric:tabular-nums}
-.pill.live b{color:var(--on)}
-.tools{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px}
-.tools input,.tools select,.tools button{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px}
-.tools input[type=search]{flex:1 1 220px;min-width:0}
-.tools label{display:flex;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer}
-.tools button{cursor:pointer}
-:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.scroll{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:12px}
-table{border-collapse:collapse;width:100%;min-width:900px}
-th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
-tbody tr:last-child td{border-bottom:0}
-th{font-weight:600;font-size:.85rem;color:var(--muted);position:sticky;top:0;background:var(--surface)}
-th button{all:unset;cursor:pointer;display:inline-flex;gap:4px;align-items:center}
-th button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-th[aria-sort="ascending"] button::after{content:"\25B2";font-size:.65rem}
-th[aria-sort="descending"] button::after{content:"\25BC";font-size:.65rem}
-td.rank{font-weight:800;font-size:1.1rem;font-variant-numeric:tabular-nums;color:var(--accent);width:56px}
-.name b{display:block;font-weight:700}
-.name span{color:var(--muted);font-size:.85rem}
-.stat{display:flex;align-items:center;gap:8px;font-variant-numeric:tabular-nums;font-weight:600;min-width:96px}
-.bar{flex:1;height:6px;border-radius:3px;background:var(--bar);overflow:hidden}
-.bar i{display:block;height:100%;background:var(--barfill)}
-.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--off);margin-right:7px}
-.is-on .dot{background:var(--on);box-shadow:0 0 0 3px color-mix(in srgb,var(--on) 25%,transparent)}
-.is-on{color:var(--on);font-weight:700}
-.muted{color:var(--muted)}
-a{color:var(--accent)}
-.tag{border:1px solid var(--line);border-radius:6px;padding:2px 8px;font-size:.8rem}
-.empty{padding:32px;text-align:center;color:var(--muted)}
-footer{margin-top:16px;color:var(--muted);font-size:.85rem}
-.about{margin-top:32px;display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-.about section{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
-.about h2{margin:0 0 8px;font-size:1.15rem;font-weight:700}
-.about p{margin:0;max-width:62ch;color:var(--muted)}
-.about p strong{color:var(--ink)}
+*{box-sizing:border-box}
+body{margin:0;background:#000;color:#f2f2f3;font-family:'Space Grotesk',system-ui,sans-serif}
+.w{max-width:1040px;margin:0 auto;padding:56px 20px 80px;display:flex;flex-direction:column;align-items:center;gap:20px}
+.m{font-family:'JetBrains Mono',ui-monospace,monospace}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid #c8ff3d;outline-offset:2px}
+svg.i{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+header{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
+.logo{width:56px;height:56px;border-radius:16px;background:#c8ff3d;color:#000;display:flex;align-items:center;justify-content:center}
+h1{margin:0;font-size:44px;line-height:1.1}
+header p{margin:0;color:#8a8a93;font-size:15px}
+.bar{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.tab{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 16px;border-radius:12px;background:#0d0d10;border:1px solid #26262c;color:#a1a1aa;font-size:14px;font-weight:500}
+.tab:hover{color:#fff;border-color:#3a3a42}
+.tab.on{background:#f2f2f3;color:#000;border-color:#f2f2f3}
+.srch{height:44px;width:min(100%,320px);border-radius:12px;background:#0d0d10;border:1px solid #26262c;color:#f2f2f3;padding:0 16px;font:inherit;font-size:14px;text-align:center}
+.srch::placeholder{color:#8a8a93}
+.best{display:flex;align-items:center;gap:14px;padding:16px 28px;border-radius:16px;border:1px solid #3d3d12;background:#0f0f08}
+.best small{color:#c8ff3d;font-size:12px}
+.best div.t{display:flex;flex-direction:column;align-items:center;gap:2px}
+.list{width:100%;display:flex;flex-direction:column;gap:10px}
+.item{background:#0b0b0e;border:1px solid #1f1f24;border-radius:16px}
+.row{width:100%;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px;padding:14px 18px;background:none;border:0;border-radius:16px;text-align:left}
+.row:hover{background:#101014}
+.rk{width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:#15151a;font-weight:700;font-size:18px;flex:none}
+.r1{background:#ffd23f;color:#000}.r2{background:#d4d8df;color:#000}.r3{background:#cd8f5a;color:#000}
+.av{position:relative;width:48px;height:48px;border-radius:12px;background:#1a1a20;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;color:#c8ff3d;flex:none;overflow:hidden}
+.av img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.who{display:flex;align-items:center;gap:12px;flex:1 1 250px;min-width:0}
+.nm{display:flex;flex-direction:column;gap:2px;min-width:0}
+.nm b{font-size:17px;overflow-wrap:anywhere}.nm small{color:#8a8a93;font-size:13px;overflow-wrap:anywhere}
+.tag{display:inline-flex;align-items:center;gap:6px;color:#a1a1aa;font-size:12px}
+.reg{height:24px;padding:0 10px;border-radius:8px;background:#1b1b22;color:#c8ff3d;font-size:12px;font-weight:700;display:inline-flex;align-items:center}
+.cells{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;flex:1 1 380px}
+.cell{position:relative;display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 4px 8px;border-radius:12px;background:#121216;border:1px solid #1f1f24;color:#a1a1aa}
+.cell b{font-size:20px;color:#f2f2f3}.cell i{font-style:normal;font-size:12px;font-weight:700}.cell span{font-size:11px;letter-spacing:.06em;color:#8a8a93}
+.hl{border-color:#c8ff3d}
+.hot{border-color:#ff7a1a;animation:glow 1.4s ease-in-out infinite alternate}
+@keyframes glow{from{box-shadow:0 0 10px rgba(255,122,26,.25),inset 0 0 10px rgba(255,122,26,.12)}to{box-shadow:0 0 22px rgba(255,122,26,.5),inset 0 0 16px rgba(255,122,26,.25)}}
+.fl{position:absolute;top:-14px;right:-6px;width:24px;height:30px;transform-origin:50% 100%;animation:flick .8s ease-in-out infinite alternate;pointer-events:none}
+.fl .o{fill:#ff6a1a}.fl .n{fill:#ffd23f;transform-origin:50% 100%;animation:flick2 .55s ease-in-out infinite alternate}
+@keyframes flick{0%{transform:scale(1,1) rotate(-4deg)}50%{transform:scale(.9,1.14) rotate(3deg)}100%{transform:scale(1.06,.94) rotate(-2deg)}}
+@keyframes flick2{from{transform:scale(1,1)}to{transform:scale(.8,1.2)}}
+@media (prefers-reduced-motion:reduce){.fl,.fl .n,.hot{animation:none}}
+.tot{width:104px;display:flex;flex-direction:column;align-items:center;gap:2px;position:relative;flex:none}
+.tot b{font-size:26px}.tot small{color:#8a8a93;font-size:12px}.tot i{font-style:normal;font-weight:700;font-size:15px}
+.det{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;padding:18px;border-top:1px solid #1f1f24}
+.f{flex:1 1 200px;display:flex;flex-direction:column;align-items:center;gap:4px;padding:12px;border-radius:12px;background:#121216;text-align:center}
+.f small{color:#8a8a93;font-size:12px}.f span,.f a{font-size:15px;font-weight:500;display:flex;align-items:center;gap:8px;overflow-wrap:anywhere}
+.f a{color:#c8ff3d}
+.bd{width:34px;height:38px;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);display:flex;align-items:center;justify-content:center;color:#000;font-weight:700;font-size:12px}
+.bars{width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.br{display:flex;flex-direction:column;gap:6px;padding:12px;border-radius:12px;background:#121216}
+.br .l{display:flex;justify-content:space-between;font-size:13px;color:#a1a1aa}
+.br .tr{height:6px;border-radius:3px;background:#24242a}.br .tr div{height:6px;border-radius:3px;background:#c8ff3d}
+.dot{width:8px;height:8px;border-radius:50%;background:#4ade80}.dot.off{background:#6b6b75}
+.empty{text-align:center;color:#8a8a93}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <div>
-      <h1>Official Top Roblox Speedrunners List</h1>
-      <p class="sub">The original ranking of Roblox speedrunners, founded and owned by <strong>zVoidSkixlled</strong>, founder of Mewza. Ranked by bounce, no-bounce, consistency and cam scores, with live online status.</p>
-    </div>
-    <div class="summary" id="summary" aria-live="polite"></div>
-  </header>
-
-  <div class="tools">
-    <input type="search" id="q" placeholder="Search username or display name" aria-label="Search runners">
-    <select id="region" aria-label="Filter by region"><option value="">All regions</option></select>
-    <select id="device" aria-label="Filter by device"><option value="">All devices</option><option>PC</option><option>MOB</option></select>
-    <label><input type="checkbox" id="onlyActive"> Active runners</label>
-    <label><input type="checkbox" id="onlyOnline"> Online now</label>
-    <button type="button" id="theme">Toggle theme</button>
-  </div>
-
-  <div class="scroll">
-    <table>
-      <thead><tr id="head"></tr></thead>
-      <tbody id="body"></tbody>
-    </table>
-    <div class="empty" id="empty" hidden>No runners match these filters.</div>
-  </div>
-  <div class="about">
-    <section aria-labelledby="h-about">
-      <h2 id="h-about">About the list</h2>
-      <p>The Official Top Roblox Speedrunners List was first suggested and is owned by <strong>zVoidSkixlled</strong>, founder of Mewza and of this list. Runners are ranked on four criteria: bounce, no-bounce, consistency and cam. The data on this page is maintained by the list's owner.</p>
-    </section>
-    <section aria-labelledby="h-auth">
-      <h2 id="h-auth">Authenticity notice</h2>
-      <p>This is the original and only official version of the list. Copies of this list or its code that claim it as their own are not authentic and are not endorsed by its owner. <strong>TTTiers</strong> is not the original list and is not affiliated with this one. Its rankings are not endorsed here and may not match the official data.</p>
-    </section>
-  </div>
-  <footer><span id="foot"></span><br>&copy; 2026 zVoidSkixlled. Official Top Roblox Speedrunners List. All rights reserved.</footer>
-</div>
-
+<main class="w">
+<header>
+<div class="logo"><svg class="i" style="width:30px;height:30px;stroke-width:2.2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="14" r="7"/><path d="M12 14l3-3M9 3h6M12 3v4"/></svg></div>
+<h1 id="title">Leaderboard</h1>
+<p id="sub"></p>
+</header>
+<nav class="bar" id="tabs" aria-label="Category"></nav>
+<div class="bar" id="plats"></div>
+<div class="bar"><input class="srch" id="q" placeholder="Search players…" aria-label="Search players" autocomplete="off"></div>
+<div id="best"></div>
+<div class="list" id="list"></div>
+</main>
 <script>
-const COLS=[
-  {k:"rank",t:"#"},{k:"name",t:"Runner"},{k:"bounce",t:"Bounce"},{k:"nobounce",t:"No-bounce"},
-  {k:"consistency",t:"Consistency"},{k:"cam",t:"Cam"},{k:"device",t:"Device"},{k:"region",t:"Region"},
-  {k:"status",t:"Activity"},{k:"presence",t:"Online"},{k:"youtube",t:"YouTube"}
-];
-const state={rows:[],presence:{},sort:"rank",dir:1};
-const $=id=>document.getElementById(id);
-const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-
-function presenceOf(r){
-  const p=state.presence[r.id];
-  if(!p)return{online:false,known:false,last:null};
-  return{online:Number(p.type)>0,known:true,last:p.lastOnline?new Date(p.lastOnline):null};
-}
-function ago(d){
-  if(!d||isNaN(d))return"unknown";
-  const s=Math.max(0,(Date.now()-d.getTime())/1000);
-  const u=[[31536000,"y"],[2592000,"mo"],[86400,"d"],[3600,"h"],[60,"min"]];
-  for(const[n,l]of u){if(s>=n)return Math.floor(s/n)+" "+l+" ago"}
-  return"just now";
-}
-function presenceCell(r){
-  const p=presenceOf(r);
-  if(p.online)return'<span class="is-on"><span class="dot"></span>Online now</span>';
-  if(!p.known)return'<span class="muted"><span class="dot"></span>No data</span>';
-  return'<span><span class="dot"></span>Offline</span> <span class="muted">· seen '+ago(p.last)+'</span>';
-}
-function stat(v){
-  const n=Number(v)||0;
-  return'<div class="stat"><span>'+n+'</span><div class="bar"><i style="width:'+Math.min(100,n)+'%"></i></div></div>';
-}
-function safeYT(u){
-  try{const x=new URL(u);return x.protocol==="https:"&&/(^|\.)youtube\.com$/.test(x.hostname)?x.href:""}catch{return""}
-}
-function sortVal(r,k){
-  if(k==="presence"){const p=presenceOf(r);return p.online?Infinity:(p.last?p.last.getTime():-1)}
-  if(k==="name")return(r.display||r.name).toLowerCase();
-  return r[k]??"";
-}
-function filtered(){
-  const q=$("q").value.trim().toLowerCase(),rg=$("region").value,dv=$("device").value;
-  const act=$("onlyActive").checked,onl=$("onlyOnline").checked;
-  return state.rows.filter(r=>
-    (!q||r.name.toLowerCase().includes(q)||String(r.display).toLowerCase().includes(q))&&
-    (!rg||r.region===rg)&&(!dv||r.device===dv)&&
-    (!act||r.status==="active")&&(!onl||presenceOf(r).online));
-}
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const IC={
+ all:'<path d="M7 4h10v5a5 5 0 0 1-10 0zM12 14v4M8 20h8M7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"/>',
+ bounce:'<circle cx="12" cy="6" r="3"/><path d="M7 20l2.5-3 2.5 3 2.5-3 2.5 3"/>',
+ nobounce:'<path d="M5 5v14h14"/><path d="M5 5l14 14" stroke-dasharray="2 3"/>',
+ cam:'<rect x="3" y="7" width="18" height="12" rx="2"/><circle cx="12" cy="13" r="3"/><path d="M8 7l1.5-2h5L16 7"/>',
+ consistency:'<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor"/>',
+ pc:'<rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/>',
+ mob:'<rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/>',
+ yt:'<rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor"/>'
+};
+const ic=(k,s)=>`<svg class="i" ${s?`style="width:${s}px;height:${s}px"`:''} viewBox="0 0 24 24" aria-hidden="true">${IC[k]||''}</svg>`;
+const FL='<svg class="fl" viewBox="0 0 24 30" aria-label="On fire"><path class="o" d="M12 1c1 6 9 9 9 18a9 9 0 0 1-18 0c0-4 2-6 4-8 0 3 1 5 3 5 0-6-1-9 2-15z"/><path class="n" d="M12 14c1 3 4 4 4 8a4 4 0 0 1-8 0c0-2 1-3 2-4 0 1 1 2 1 2 0-2 0-4 1-6z"/></svg>';
+const COL={S:'#ffd23f',A:'#4ade80',B:'#7aa2ff',C:'#c9b6ff',D:'#e0a96d',F:'#ff6b6b'};
+let CFG,P=[],S={tab:'all',plat:'all',q:'',open:null},CACHE={};
+const grade=(v,top)=>{if(top)return'S+';for(const[m,g]of CFG.grades)if(v>=m)return g;return'F-'};
+const col=g=>COL[g[0]];
+const mob=p=>/^mob/i.test(p.device||'');
+const num=(p,k)=>+p[k]||0;
+function flame(p,key,v){const o=p.flames&&p.flames[key];if(typeof o==='boolean')return o;const F=CFG.flame;return !!F.enabled&&v>=(key==='overall'?F.overall:F.category)}
+function ago(iso){const s=(Date.now()-new Date(iso))/1000;if(s<60)return Math.max(0,Math.floor(s))+'s ago';if(s<3600)return Math.floor(s/60)+'mins ago';if(s<86400)return Math.floor(s/3600)+'hrs ago';if(s<2592000)return Math.floor(s/86400)+' days ago';return new Date(iso).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})}
+function age(p){const d=p.joined||p.created;if(!d)return null;const y=Math.floor((Date.now()-new Date(d))/31557600000);return{t:y<1?'<1y':y+'y',c:y>=8?'#c8ff3d':y>=5?'#ffd23f':y>=3?'#d4d8df':y>=1?'#cd8f5a':'#8a8a93',d:new Date(d).toLocaleDateString('en-US',{month:'short',year:'numeric'})}}
+const nameOf=p=>p.liveName||p.name||'';
+const dispOf=p=>p.liveDisplay||p.display||nameOf(p);
+const av=p=>`<span class="av">${esc(dispOf(p)[0]||'?')}${p.img?`<img src="${esc(p.img)}" alt="" loading="lazy" onerror="this.remove()">`:''}</span>`;
+function cellsOf(p,top){return CFG.categories.map(c=>{const v=num(p,c.key),g=grade(v);return`<span class="cell ${S.tab===c.key?'hl':''} ${flame(p,c.key,v)?'hot':''}">${flame(p,c.key,v)?FL:''}${ic(c.key)}<b class="m">${v}</b><i style="color:${col(g)}">${g}</i><span>${esc(c.short)}</span></span>`}).join('')}
+function detail(p){const a=age(p),on=p.lastOnline?true:p.status==='active';
+ const seen=p.lastOnline?ago(p.lastOnline):(p.status==='active'?'Active':'Inactive');
+ return`<div class="det">
+ <div class="f"><small>Country</small><span>${esc(p.country||'n/a')}${p.region?' · '+esc(p.region):''}</span></div>
+ <div class="f"><small>Last online</small><span><i class="dot ${on?'':'off'}"></i>${esc(seen)}</span></div>
+ <div class="f"><small>Joined Roblox</small><span>${a?`<b class="bd" style="background:${a.c}">${a.t}</b>${a.d}`:'n/a'}</span></div>
+ <div class="f"><small>Profile</small><a href="https://www.roblox.com/users/${esc(p.id)}/profile" target="_blank" rel="noopener">roblox.com/users/${esc(p.id)}</a></div>
+ <div class="f"><small>Hardest tower</small><span>${esc(p.tower||'n/a')}</span></div>
+ <div class="f"><small>Hardest obby</small><span>${esc(p.obby||'n/a')}</span></div>
+ ${p.youtube?`<div class="f"><small>YouTube</small><a href="${esc(p.youtube)}" target="_blank" rel="noopener">${ic('yt')}Channel</a></div>`:''}
+ <div class="bars">${CFG.categories.map(c=>{const v=num(p,c.key),g=grade(v);return`<div class="br"><div class="l"><b style="color:#f2f2f3">${esc(c.label)}</b><span><b class="m" style="color:#f2f2f3">${v}</b> ${g.replace('+','+')}</span></div><div class="tr"><div style="width:${v}%"></div></div></div>`}).join('')}</div></div>`}
 function render(){
-  const rows=filtered().sort((a,b)=>{
-    const x=sortVal(a,state.sort),y=sortVal(b,state.sort);
-    return(x<y?-1:x>y?1:a.rank-b.rank)*state.dir;
-  });
-  $("head").innerHTML=COLS.map(c=>{
-    const s=state.sort===c.k?(state.dir===1?"ascending":"descending"):"none";
-    return'<th scope="col" aria-sort="'+s+'"><button type="button" data-k="'+c.k+'">'+c.t+'</button></th>';
-  }).join("");
-  $("body").innerHTML=rows.map(r=>{
-    const yt=safeYT(r.youtube);
-    return'<tr><td class="rank">'+r.rank+'</td>'+
-      '<td class="name"><b>'+esc(r.display||r.name)+'</b><span>@'+esc(r.name)+'</span></td>'+
-      '<td>'+stat(r.bounce)+'</td><td>'+stat(r.nobounce)+'</td><td>'+stat(r.consistency)+'</td><td>'+stat(r.cam)+'</td>'+
-      '<td><span class="tag">'+esc(r.device)+'</span></td>'+
-      '<td>'+(r.region?esc(r.region):'<span class="muted">n/a</span>')+'</td>'+
-      '<td>'+(r.status==="active"?'Active':'<span class="muted">Inactive</span>')+'</td>'+
-      '<td>'+presenceCell(r)+'</td>'+
-      '<td>'+(yt?'<a href="'+esc(yt)+'" target="_blank" rel="noopener noreferrer">Channel</a>':'<span class="muted">none</span>')+'</td></tr>';
-  }).join("");
-  $("empty").hidden=rows.length>0;
-  const on=state.rows.filter(r=>presenceOf(r).online).length;
-  $("summary").innerHTML='<span class="pill"><b>'+state.rows.length+'</b> runners</span>'+
-    '<span class="pill"><b>'+state.rows.filter(r=>r.status==="active").length+'</b> active</span>'+
-    '<span class="pill live"><b>'+on+'</b> online now</span>';
+ const n=CFG.categories.length,all=S.tab==='all',max=all?100*n:100;
+ let L=P.filter(p=>S.plat==='all'||(S.plat==='mob')===mob(p));
+ L.forEach(p=>{p.total=CFG.categories.reduce((a,c)=>a+num(p,c.key),0);p.main=all?p.total:num(p,S.tab)});
+ L.sort((a,b)=>b.main-a.main||b.total-a.total);
+ L.forEach((p,i)=>p.rank=i+1);
+ const q=S.q.trim().toLowerCase();
+ const V=L.filter(p=>!q||[p.name,p.display,p.liveName,p.liveDisplay].some(x=>String(x||'').toLowerCase().includes(q)));
+ const lab=all?'Overall':CFG.categories.find(c=>c.key===S.tab).label,b=L[0];
+ $('#best').innerHTML=b?`<div class="best">${av(b)}<div class="t"><small>Best in ${esc(lab.toLowerCase())}</small><b style="font-size:18px">${esc(dispOf(b))}</b></div><b class="m" style="font-size:28px">${b.main}</b></div>`:'';
+ $('#list').innerHTML=V.map(p=>{const g=grade(all?Math.round(p.total/n):p.main,p.rank===1),open=S.open===p.id,dv=mob(p);
+ return`<div class="item"><button class="row" data-id="${esc(p.id)}" aria-expanded="${open}">
+ <span class="rk ${p.rank<4?'r'+p.rank:''}">${p.rank}</span>
+ <span class="who">${av(p)}<span class="nm"><b>${esc(dispOf(p))}</b><small>@${esc(nameOf(p))}</small><span class="tag">${ic(dv?'mob':'pc')}${dv?'Mobile':'PC'}${p.region?` <span class="reg">${esc(p.region)}</span>`:''}</span></span></span>
+ <span class="cells">${cellsOf(p)}</span>
+ <span class="tot">${all&&flame(p,'overall',p.total)?FL:''}<b class="m">${p.main}</b><small>/${max}</small><i style="color:${col(g)}">${g}</i></span>
+ </button>${open?detail(p):''}</div>`}).join('')||'<p class="empty">No players found.</p>';
 }
-async function loadPresence(){
-  try{
-    const res=await fetch("presence.json?t="+Date.now(),{cache:"no-store"});
-    if(!res.ok)throw new Error(res.status);
-    const j=await res.json();
-    state.presence=j.users||{};
-    $("foot").textContent=j.updated?"Presence last updated "+ago(new Date(j.updated))+".":"Presence data loaded.";
-  }catch{
-    $("foot").textContent="No presence.json found yet, so online status shows as No data. See README steps to generate it.";
-  }
-  render();
-}
-async function init(){
-  try{
-    const res=await fetch("data.json");
-    if(!res.ok)throw new Error(res.status);
-    const d=await res.json();
-    const K=d.meta.scoreKeys,YT=d.meta.yt;
-    state.rows=d.runners.map((r,i)=>{
-      const o={id:String(r.uid),name:r.user,display:r.alias,device:r.dev,region:r.reg||"",
-        status:r.act?"active":"inactive",youtube:r.yt?YT+r.yt:"",rank:i+1};
-      K.forEach((k,j)=>{o[k]=r.s[j]});
-      return o;
-    });
-  }catch{
-    $("body").innerHTML="";$("empty").hidden=false;
-    $("empty").textContent="Could not load data.json. Put it next to index.html and serve over http (GitHub Pages or a local server).";
-    return;
-  }
-  const regions=[...new Set(state.rows.map(r=>r.region).filter(Boolean))].sort();
-  $("region").insertAdjacentHTML("beforeend",regions.map(r=>'<option>'+esc(r)+'</option>').join(""));
-  await loadPresence();
-  setInterval(loadPresence,60000);
-}
-$("head").addEventListener("click",e=>{
-  const b=e.target.closest("button[data-k]");if(!b)return;
-  const k=b.dataset.k;
-  if(state.sort===k)state.dir*=-1;
-  else{state.sort=k;state.dir=["rank","name","region","device"].includes(k)?1:-1}
-  render();
-});
-["q","region","device","onlyActive","onlyOnline"].forEach(id=>$(id).addEventListener("input",render));
-$("theme").addEventListener("click",()=>{
-  const r=document.documentElement;
-  const dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;
-  r.dataset.theme=dark?"light":"dark";
-});
-init();
+function tabs(){const t=[{key:'all',label:'Overall'},...CFG.categories];
+ $('#tabs').innerHTML=t.map(c=>`<button class="tab ${S.tab===c.key?'on':''}" data-tab="${c.key}">${ic(c.key)}${esc(c.label)}</button>`).join('');
+ $('#plats').innerHTML=[['all','All players',''],['pc','PC','pc'],['mob','Mobile','mob']].map(([k,l,i])=>`<button class="tab ${S.plat===k?'on':''}" data-plat="${k}">${i?ic(i):''}${l}</button>`).join('')}
+async function profiles(){
+ const R=CFG.roblox,ttl=(R.cacheMinutes||60)*6e4,now=Date.now();
+ try{CACHE=JSON.parse(localStorage.getItem('rsl')||'{}')}catch{CACHE={}}
+ const need=P.map(p=>p.id).filter(id=>!CACHE[id]||now-CACHE[id].t>ttl);
+ for(let i=0;i<need.length;i+=100){const ids=need.slice(i,i+100);
+  try{const r=await fetch(R.users+'/v1/users',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({userIds:ids.map(Number),excludeBannedUsers:false})});
+   (await r.json()).data.forEach(u=>{CACHE[u.id]={...CACHE[u.id],n:u.name,d:u.displayName,t:now}})}catch{}
+  try{const r=await fetch(`${R.thumbnails}/v1/users/avatar-headshot?userIds=${ids.join(',')}&size=150x150&format=Png`);
+   (await r.json()).data.forEach(u=>{CACHE[u.targetId]={...CACHE[u.targetId],i:u.imageUrl,t:now}})}catch{}}
+ try{localStorage.setItem('rsl',JSON.stringify(CACHE))}catch{}
+ apply();render()}
+function apply(){P.forEach(p=>{const c=CACHE[p.id];if(c){p.liveName=c.n;p.liveDisplay=c.d;p.img=c.i;p.created=p.created||c.c}})}
+async function created(p){if(p.created||p.joined||p._t)return;p._t=1;
+ try{const r=await fetch(`${CFG.roblox.users}/v1/users/${p.id}`);p.created=(await r.json()).created;CACHE[p.id]={...CACHE[p.id],c:p.created};try{localStorage.setItem('rsl',JSON.stringify(CACHE))}catch{}}catch{}
+ if(S.open===p.id)render()}
+document.addEventListener('click',e=>{
+ const t=e.target.closest('[data-tab]'),pl=e.target.closest('[data-plat]'),r=e.target.closest('.row');
+ if(t){S.tab=t.dataset.tab;S.open=null;tabs();render()}
+ else if(pl){S.plat=pl.dataset.plat;S.open=null;tabs();render()}
+ else if(r){const id=r.dataset.id;S.open=S.open===id?null:id;render();const p=P.find(x=>x.id===id);if(S.open&&p)created(p)}});
+$('#q').addEventListener('input',e=>{S.q=e.target.value;render()});
+(async()=>{
+ try{[CFG,P]=await Promise.all([fetch('config.json').then(r=>r.json()),fetch('players.json').then(r=>r.json())])}
+ catch{$('#list').innerHTML='<p class="empty">Couldn’t load config.json or players.json. Open this page through GitHub Pages or a local server.</p>';return}
+ P.forEach(p=>p.id=String(p.id));
+ document.title=CFG.title;$('#title').textContent=CFG.title;$('#sub').textContent=CFG.subtitle||'';
+ tabs();try{CACHE=JSON.parse(localStorage.getItem('rsl')||'{}')}catch{}apply();render();profiles()})();
 </script>
 </body>
 </html>
